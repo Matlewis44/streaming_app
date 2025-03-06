@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../../../models/User');
 
 exports.createUser = async (req, res) => {
   try {
@@ -20,15 +20,15 @@ exports.getUser = async (req, res) => {
   }
 };
 
-exports.getUserByEmail = async (req, res) => {
-  try {
-    const user = await User.findOne({ email: req.params.email });
-    if (!user) return res.status(404).json({ error: 'User not found' });
-    res.json(user);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
+// exports.getUserByEmail = async (req, res) => {
+//   try {
+//     const user = await User.findOne({ email: req.params.email });
+//     if (!user) return res.status(404).json({ error: 'User not found' });
+//     res.json(user);
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   }
+// };
 
 exports.updateUser = async (req, res) => {
   try {

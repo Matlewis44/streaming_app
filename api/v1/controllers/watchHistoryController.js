@@ -1,4 +1,4 @@
-const WatchHistory = require('../models/WatchHistory');
+const WatchHistory = require('../../../models/WatchHistory');
 
 exports.createWatchHistory = async (req, res) => {
   try {
